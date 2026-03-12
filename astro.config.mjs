@@ -3,8 +3,9 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://paboden.github.io/markgodi_com',
-  base: '/',
+  site: 'https://paboden.github.io',
+  base: '/markgodi_com',
+  publicDir: './public',
   redirects: {
     '/about': '/#about',
     '/book': '/#book',
