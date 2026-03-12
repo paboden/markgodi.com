@@ -7,10 +7,10 @@ export default defineConfig({
   base: '/markgodi_com',
   publicDir: './public/markgodi_com',
   redirects: {
-    '/about': '/#about',
-    '/book': '/#book',
-    '/workshops': '/#workshops',
-    '/connect': '/#connect',
-    '/blog': '/#blog',
+    '/about': '/markgodi_com/#about',
+    '/book': '/markgodi_com/#book',
+    '/workshops': '/markgodi_com/#workshops',
+    '/connect': '/markgodi_com/#connect',
+    '/blog': '/markgodi_com/#blog',
   }
 });
