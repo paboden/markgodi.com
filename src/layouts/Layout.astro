@@ -3,10 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/markgodi_com/favicon.svg" />
+    <link rel="icon" href="/markgodi_com/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <meta
+      name="description"
+      content="Mark Godi's a teacher, author, and speaker focused on sustainable, student-centered learning environments. Author of 'Slowbuilt: Education, Growth, and Grace'."
+    />
+    <title>Mark Godi - Teacher, Author, Speaker</title>
   </head>
   <body>
     <slot />
@@ -14,6 +18,12 @@
 </html>
 
 <style is:global>
+  @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+  * {
+    box-sizing: border-box;
+  }
+
   html,
   body {
     margin: 0;
@@ -26,6 +36,25 @@
     html {
       scroll-behavior: smooth;
     }
+  }
+
+  body {
+    font-family:
+      BlinkMacSystemFont,
+      -apple-system,
+      "Segoe UI",
+      Roboto,
+      Oxygen-Sans,
+      Ubuntu,
+      Cantarell,
+      "Helvetica Neue",
+      Helvetica,
+      Arial,
+      sans-serif;
+    line-height: 1.6;
+    font-size: 1.125rem;
+    color: #333;
+    scroll-behavior: smooth;
   }
 
   .visually-hidden {
