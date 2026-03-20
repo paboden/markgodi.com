@@ -1,49 +1,54 @@
 ---
-import Blockquote from "../components/Blockquote.astro";
+import Container from "../layouts/Container.astro";
+import DecorImage from "./DecorImage.astro";
 ---
 
-<div class="columns" id="introduction">
-  <div class="left">
-    <hgroup>
-      <h2>Slowbuilt: Workshop</h2>
-      <p class="lead">Growth, Without Panic</p>
-      <hr />
-      <p class="small">A companion workshop series for the Slowbuilt book.</p>
-    </hgroup>
+<Container bg="tan" id="workshops" spacing="extra">
+  <DecorImage size="extra" fileName="preston-pencil-cutout.png" />
+
+  <div class="columns" id="introduction">
+    <div class="left">
+      <hgroup>
+        <h2>Slowbuilt: Workshop</h2>
+        <p class="lead">Growth, Without Panic</p>
+        <hr />
+        <p class="small">A companion workshop series for the Slowbuilt book.</p>
+      </hgroup>
+    </div>
+
+    <div class="right">
+      <h3>What is it?</h3>
+      <p>
+        Slowbuilt is a four-session workshop series designed to help students,
+        educators, and school communities rethink how growth, progress, and
+        potential are understood. Rather than motivating through pressure or
+        addressing disengagement with compliance-based fixes, Slowbuilt helps
+        participants reinterpret progress accurately, recognize misalignment
+        instead of failure, and regain agency without urgency.
+      </p>
+      <p>
+        The workshop is experiential, reflective, and psychologically safe. It
+        does not use diagnostic language, require public sharing, or promote
+        one-size-fits-all solutions.
+      </p>
+
+      <h3>How it works</h3>
+      <p>
+        The series consists of up to four sessions, each lasting 75–90 minutes.
+        Each session is built around an anchor activity that ties to the bigger
+        ideas and reflection.
+      </p>
+
+      <ul class="links">
+        <li>
+          <a class="yellow" href="mailto:mark@markgodi.com"
+            >Contact me for more information</a
+          >
+        </li>
+      </ul>
+    </div>
   </div>
-
-  <div class="right">
-    <h3>What is it?</h3>
-    <p>
-      Slowbuilt is a four-session workshop series designed to help students,
-      educators, and school communities rethink how growth, progress, and
-      potential are understood. Rather than motivating through pressure or
-      addressing disengagement with compliance-based fixes, Slowbuilt helps
-      participants reinterpret progress accurately, recognize misalignment
-      instead of failure, and regain agency without urgency.
-    </p>
-    <p>
-      The workshop is experiential, reflective, and psychologically safe. It
-      does not use diagnostic language, require public sharing, or promote
-      one-size-fits-all solutions.
-    </p>
-
-    <h3>How it works</h3>
-    <p>
-      The series consists of up to four sessions, each lasting 75–90 minutes.
-      Each session is built around an anchor activity that ties to the bigger
-      ideas and reflection.
-    </p>
-
-    <ul class="links">
-      <li>
-        <a class="yellow" href="mailto:mark@markgodi.com"
-          >Contact me for more information</a
-        >
-      </li>
-    </ul>
-  </div>
-</div>
+</Container>
 
 <style>
   .columns {

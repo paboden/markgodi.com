@@ -1,53 +1,59 @@
 ---
-
+import Container from "../layouts/Container.astro";
+import DecorImage from "./DecorImage.astro";
 ---
 
-<h2 id="about">About me</h2>
+<Container bg="tan" id="about" spacing="extra">
+  <DecorImage size="medium" fileName="preston-looking-cutout.png" />
 
-<div class="text-columns">
-  <p>
-    For the last twenty years I’ve worked in public schools as a teacher,
-    administrator, and turnaround specialist. I’ve taken campuses from “possible
-    probation” to celebrated WASC models, led credential certification for
-    future teachers through University of the Pacific, and keynoted statewide
-    conferences on the evolving landscape of college and career readiness.
-  </p>
+  <h2 id="about">About me</h2>
 
-  <p>
-    As a teacher, I built a thriving art program from the ground up, helping
-    students find confidence, their voice, and their creative agency. I have
-    mentored hundreds of teens navigating the tangled path toward adulthood.
-  </p>
-</div>
+  <div class="text-columns">
+    <p>
+      For the last twenty years I’ve worked in public schools as a teacher,
+      administrator, and turnaround specialist. I’ve taken campuses from
+      “possible probation” to celebrated WASC models, led credential
+      certification for future teachers through University of the Pacific, and
+      keynoted statewide conferences on the evolving landscape of college and
+      career readiness.
+    </p>
 
-<div class="columns">
-  <div class="column">
-    <h3>Credentials</h3>
-    <ul>
-      <li>San Joaquin Delta College</li>
-      <li>University of the Pacific</li>
-      <li>Master’s in Digital Journalism — National University</li>
-      <li>Temporary Professor → San Joaquin Delta College</li>
-    </ul>
+    <p>
+      As a teacher, I built a thriving art program from the ground up, helping
+      students find confidence, their voice, and their creative agency. I have
+      mentored hundreds of teens navigating the tangled path toward adulthood.
+    </p>
   </div>
-  <div class="column">
-    <h3>Experience</h3>
-    <ul>
-      <li>20+ years in public education</li>
-      <li>WASC Coordinator and School-Site Visiting Commitee</li>
-      <li>
-        Keynote speaker at 2025 NorCal WASC Conference and statewide events
-      </li>
-    </ul>
-  </div>
-</div>
 
-<figure class="conference-pic">
-  <img src="/markgodi_com/wasc-conference-photo.webp" alt="Mark Godi" />
-  <figcaption>
-    At the 2025 NorCal WASC Conference, where I was a keynote speaker.
-  </figcaption>
-</figure>
+  <div class="columns">
+    <div class="column">
+      <h3>Credentials</h3>
+      <ul>
+        <li>San Joaquin Delta College</li>
+        <li>University of the Pacific</li>
+        <li>Master’s in Digital Journalism — National University</li>
+        <li>Temporary Professor → San Joaquin Delta College</li>
+      </ul>
+    </div>
+    <div class="column">
+      <h3>Experience</h3>
+      <ul>
+        <li>20+ years in public education</li>
+        <li>WASC Coordinator and School-Site Visiting Commitee</li>
+        <li>
+          Keynote speaker at 2025 NorCal WASC Conference and statewide events
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <figure class="conference-pic">
+    <img src="/markgodi_com/wasc-conference-photo.webp" alt="Mark Godi" />
+    <figcaption>
+      At the 2025 NorCal WASC Conference, where I was a keynote speaker.
+    </figcaption>
+  </figure>
+</Container>
 
 <style>
   .columns {

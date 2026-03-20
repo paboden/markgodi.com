@@ -1,0 +1,113 @@
+---
+import Container from "../layouts/Container.astro";
+import Blockquote from "./Blockquote.astro";
+---
+
+<Container bg="yellow" id="reviews" spacing="extra">
+  <h2 id="reviews">Reviews</h2>
+
+  <Blockquote
+    bg="none"
+    style="alternate"
+    citation="Tara Cuslidge Staiano"
+    note="Berkeley-Educated instructor and award-winning journalistic publication advisor at San Joaquin Delta College (more than 20-years in education)."
+  >
+    <p>
+      "Author Mark Godi digs deep into his own memories and realities as he
+      learned to navigate education and life as someone who felt he never quite
+      fit anywhere. Godi's realizations are relatable. He celebrates his own
+      victories while ensuring those who are facing similar challenges
+      understand that there is no such thing as the "right path." Instead, he
+      affirms that forward is a motion that we can all achieve, no matter how
+      quickly or how 'slowbuilt' we are. This is an excellent memoir for
+      students, but also for educators embarking on college teaching. It
+      provides a real, unfiltered reflection of navigating educational
+      experience against the backdrop of self doubt while giving cues for how
+      educators can help students find themselves in the world they do.
+      'Slowbuilt' is an excellent read."
+    </p>
+  </Blockquote>
+
+  <div class="columns">
+    <div class="column">
+      <Blockquote
+        bg="none"
+        style="alternate"
+        citation="Dr. Barry R. Groves"
+        note="Stanford-Educated Education Leader with 50 Years Shaping California Schools, from Teacher to WASC President"
+      >
+        <p>
+          "In Slowbuilt: Education, Growth, and Grace, Mark Godi weaves personal
+          stories that challenge educators to rethink how we measure growth,
+          reminding us that flat lines often signal unseen context rather than
+          failure. Drawing from my five decades of experience in education, I
+          see this book as an important resource for school leaders committed to
+          equity and sustainable progress—it's a call to replace urgency with
+          discernment, fostering environments where students and teams can build
+          steadily and authentically."
+        </p>
+      </Blockquote>
+    </div>
+    <div class="column">
+      <Blockquote
+        bg="none"
+        style="alternate"
+        citation="AnneLisa Butcher"
+        note="Veteran counselor at Stockton's Lincoln High School, the largest high school in San Joaquin County."
+      >
+        <p>
+          I love each page of this nice to read book. It caused me to really
+          reflect as a school counselor and parent how I view and hold space for
+          my students who are like Mark. It was inspiring and caused me to
+          really stop and think. I will use these ideas in my life and at work.
+        </p>
+      </Blockquote>
+    </div>
+  </div>
+</Container>
+
+<style>
+  .columns {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .column {
+    border-block-start: 1px solid #244057;
+  }
+
+  @media (min-width: 120ch) {
+    .columns {
+      flex-direction: row;
+      gap: 3rem;
+      margin-block-end: 3rem;
+      align-items: flex-start;
+
+      border-block-start: 1px solid #244057;
+      padding-block-start: 3rem;
+      margin-block-start: 3rem;
+    }
+
+    .column {
+      border-block-start: none;
+    }
+  }
+
+  .columns > .column {
+    flex: 1;
+  }
+
+  h2 {
+    margin-block: 0 3rem;
+    text-align: center;
+  }
+
+  ul {
+    margin-block: 0;
+  }
+
+  p {
+    margin-block-start: 0;
+  }
+</style>

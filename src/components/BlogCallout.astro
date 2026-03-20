@@ -1,29 +1,32 @@
 ---
-
+import Container from "../layouts/Container.astro";
 ---
 
-<div class="blog-callout">
-  <p>
-    Subscribe to my Substack blog below for a fresh take on education each week!
-  </p>
+<Container bg="white" id="blog" spacing="small">
+  <div class="blog-callout">
+    <p>
+      Subscribe to my Substack blog below for a fresh take on education each
+      week!
+    </p>
 
-  <iframe
-    src="https://markgodi.substack.com/embed"
-    style="width: 100%; height: 320px;"
-    title="Subscribe to Mark Godi's Substack Blog and keep up with the latest slowbuilt insights and updates!"
-  ></iframe>
+    <iframe
+      src="https://markgodi.substack.com/embed"
+      style="width: 100%; height: 320px;"
+      title="Subscribe to Mark Godi's Substack Blog and keep up with the latest slowbuilt insights and updates!"
+    ></iframe>
 
-  <ul class="links">
-    <li>
-      <a
-        class="yellow"
-        href="https://substack.com/@markgodi?r=7atdwj&utm_medium=ios&utm_source=profile&shareImageVariant=light"
-        >Visit my Substack Blog
-      </a>
-    </li>
-  </ul>
-</div>
-
+    <ul class="links">
+      <li>
+        <a
+          class="yellow"
+          target="_blank"
+          href="https://substack.com/@markgodi?r=7atdwj&utm_medium=ios&utm_source=profile&shareImageVariant=light"
+          >Visit my Substack Blog
+        </a>
+      </li>
+    </ul>
+  </div>
+</Container>
 <style>
   .blog-callout {
     display: flex;
@@ -96,7 +99,6 @@
 
   img {
     border-radius: 9000px 9000px;
-    /* border: 0.25rem solid #ddd; */
     border-top: 0;
     margin-block: 4rem 0;
     width: 100%;

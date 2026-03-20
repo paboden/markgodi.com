@@ -11,17 +11,16 @@ import ConnectCallout from "../components/ConnectCallout.astro";
 import WorkshopCallout from "../components/WorkshopCallout.astro";
 import DecorImage from "../components/DecorImage.astro";
 import Footer from "../components/Footer.astro";
+
+import "../styles/global.css";
+import Reviews from "../components/Reviews.astro";
 ---
 
 <Layout>
-  <div id="home"></div>
-
   <Header />
 
   <main>
-    <Container bg="white" spacing="extra" id="intro">
-      <Intro />
-    </Container>
+    <Intro />
 
     <Blockquote class="shadow">
       My mission is simple: <br />help schools, teams, and individuals trade
@@ -29,45 +28,27 @@ import Footer from "../components/Footer.astro";
       lasts.
     </Blockquote>
 
-    <Container bg="tan" id="about" spacing="extra">
-      <DecorImage
-        size="medium"
-        src="/markgodi_com/preston-looking-cutout.png"
-      />
-      <About />
-    </Container>
+    <About />
 
     <Blockquote class="shadow">
-      "Your pace is your power and no one does it alone."
+      Your pace is your power and no one does it alone.
     </Blockquote>
 
-    <Container bg="white" id="book" spacing="extra">
-      <DecorImage size="large" src="/markgodi_com/preston-reading-cutout.png" />
-      <BookCallout />
-    </Container>
+    <BookCallout />
 
-    <Container bg="tan" id="workshops" spacing="extra">
-      <DecorImage size="extra" src="/markgodi_com/preston-pencil-cutout.png" />
-      <WorkshopCallout />
-    </Container>
+    <Reviews />
 
-    <Container bg="white" id="connect">
-      <DecorImage
-        size="medium"
-        src="/markgodi_com/preston-thinking-cutout.png"
-      />
-      <ConnectCallout />
-    </Container>
+    <WorkshopCallout />
 
-    <Container bg="white" id="blog" spacing="small">
-      <BlogCallout />
-    </Container>
+    <ConnectCallout />
+
+    <BlogCallout />
   </main>
 
   <Container bg="tan" class="shadow" spacing="extra">
     <DecorImage
       size="large"
-      src="/markgodi_com/preston-main-cutout.png"
+      fileName="preston-main-cutout.png"
       class="preston-footer-logo"
     />
     <p class="preston-comment">FYI, this is Preston the tortoise.</p>
@@ -75,39 +56,3 @@ import Footer from "../components/Footer.astro";
 
   <Footer />
 </Layout>
-
-<style is:global>
-  h1,
-  h2,
-  h3 {
-    font-family: "EB Garamond", serif;
-    font-weight: 400;
-    text-box: trim-both cap alphabetic;
-  }
-
-  h1 {
-    font-size: clamp(2.5rem, 8vw, 5rem);
-    line-height: 1.1;
-    margin-block-end: 0.25em;
-  }
-
-  h2 {
-    font-size: clamp(1.75rem, 7vw, 2.75rem);
-  }
-
-  h3 {
-    font-size: clamp(1.5rem, 5vw, 2rem);
-  }
-
-  footer {
-    text-align: center;
-  }
-
-  .preston-comment {
-    font-family: "EB Garamond", serif;
-    font-style: italic;
-    color: #555;
-    margin-top: 1rem;
-    text-align: center;
-  }
-</style>

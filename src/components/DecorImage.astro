@@ -4,12 +4,20 @@ import Container from "../layouts/Container.astro";
 import type { HTMLAttributes } from "astro/types";
 
 interface Props extends HTMLAttributes<"div"> {
-  src: string;
+  fileName: string;
   alt?: string;
   size?: "small" | "medium" | "large" | "extra";
 }
 
-const { src, size = "medium", alt = "Decorative image", ...attr } = Astro.props;
+const {
+  fileName,
+  size = "medium",
+  alt = "Decorative image",
+  ...attr
+} = Astro.props;
+
+const prefix = "/markgodi_com/";
+const src = `${prefix}${Astro.props.fileName}`;
 ---
 
 <div class:list={["decor-image-wrapper", size, attr.class]}>

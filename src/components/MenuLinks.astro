@@ -1,0 +1,99 @@
+---
+
+---
+
+<ul class="menu__links">
+  <li><a href="#home" class="mobile-only">Home</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="#book">Book</a></li>
+  <li><a href="#reviews">Reviews</a></li>
+  <li><a href="#workshops">Workshop</a></li>
+  <li><a href="#connect">Connect</a></li>
+  <li><a href="#blog">Blog</a></li>
+</ul>
+
+<style>
+  /* Mobile menu links */
+  @media (max-width: 120ch) {
+    ul.menu__links {
+      gap: 0;
+      margin: 0;
+      padding: 3rem 2rem;
+      list-style: none;
+      flex-direction: column;
+      transition: all 0.3s;
+      width: 100%;
+    }
+
+    ul.menu__links li {
+      display: flex;
+      align-items: center;
+      border-block-start: 1px solid rgba(251, 247, 236, 0.7);
+      border-inline: 0;
+    }
+
+    ul.menu__links li:first-of-type() {
+      border-block-start: 0;
+    }
+
+    ul.menu__links a {
+      color: rgba(251, 247, 236, 0.7);
+      text-decoration: none;
+      font-weight: 400;
+      letter-spacing: 0.02rem;
+      font-size: 1rem;
+      padding: 1rem 1rem;
+      transition: all 0.3s;
+      width: 100%;
+      text-align: center;
+    }
+
+    ul.menu__links li:first-of-type() a {
+      border-radius: 1rem 1rem 0 0;
+    }
+
+    ul.menu__links li:last-of-type() a {
+      border-radius: 0 0 1rem 1rem;
+    }
+
+    ul.menu__links li:first-child a {
+      border-inline-start: none;
+    }
+
+    ul.menu__links a:hover {
+      background-color: rgba(32, 48, 61, 0.9);
+      color: rgba(255, 255, 255, 1);
+      transition: all 0.3s;
+    }
+  }
+
+  /* Desktop menu links */
+  @media (min-width: 120ch) {
+    ul.menu__links {
+      display: flex;
+      flex-direction: rows;
+      gap: 0.25rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul.menu__links a {
+      color: rgba(251, 247, 236, 0.7);
+      text-decoration: none;
+      font-weight: 400;
+      letter-spacing: 0.02rem;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      transition: all 0.2s;
+      border-radius: 0.5rem;
+    }
+
+    ul.menu__links a:hover {
+      background-color: #ebc975;
+      color: rgba(32, 48, 61, 1);
+      transition: all 0.2s;
+      border-radius: 0.5rem;
+    }
+  }
+</style>

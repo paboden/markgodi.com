@@ -1,46 +1,48 @@
 ---
-
+import Container from "../layouts/Container.astro";
 ---
 
-<hgroup class="visually-hidden">
-  <h1>Welcome to MarkGodi.com</h1>
-  <p>Teacher | Author | Speaker | WASC Coordinator</p>
-</hgroup>
+<Container bg="white" spacing="extra" id="intro">
+  <hgroup class="visually-hidden">
+    <h1>Welcome to MarkGodi.com</h1>
+    <p>Teacher | Author | Speaker | WASC Coordinator</p>
+  </hgroup>
 
-<div class="columns" id="introduction">
-  <div class="image">
-    <div class="profile-pic-wrapper yellow">
-      <img
-        src="/markgodi_com/profile_pic.jpg"
-        alt="Mark Godi profile picture"
-        fetchpriority="high"
-        class="profile-pic"
-      />
+  <div class="columns" id="introduction">
+    <div class="image">
+      <div class="profile-pic-wrapper yellow">
+        <img
+          src="/markgodi_com/profile_pic.jpg"
+          alt="Mark Godi profile picture"
+          fetchpriority="high"
+          class="profile-pic"
+        />
+      </div>
+    </div>
+    <div class="intro">
+      <h2>Hi, I'm Mark!</h2>
+      <p class="lead">
+        Teacher, Author, Speaker, WASC Coordinator...<br
+          class="keep-break"
+        />and the person called when accreditation is on the line<br /> and uncertainty
+        is winning.
+      </p>
+
+      <hr />
+
+      <p>
+        I offer workshops, keynotes, and coaching for schools, districts, and
+        organizations. My work is focused on helping educators and leaders build
+        sustainable, student-centered learning environments that prioritize
+        depth, relationships, and real growth over hustle culture.
+      </p>
+      <p>
+        If you’re ready to bring workshops, keynotes, or coaching to your campus
+        or district, let’s talk.
+      </p>
     </div>
   </div>
-  <div class="intro">
-    <h2>Hi, I'm Mark!</h2>
-    <p class="lead">
-      Teacher, Author, Speaker, WASC Coordinator...<br class="keep-break" />and
-      the person called when accreditation is on the line<br /> and uncertainty is
-      winning.
-    </p>
-
-    <hr />
-
-    <p>
-      I offer workshops, keynotes, and coaching for schools, districts, and
-      organizations. My work is focused on helping educators and leaders build
-      sustainable, student-centered learning environments that prioritize depth,
-      relationships, and real growth over hustle culture.
-    </p>
-    <p>
-      If you’re ready to bring workshops, keynotes, or coaching to your campus
-      or district, let’s talk.
-    </p>
-  </div>
-</div>
-
+</Container>
 <style>
   .columns {
     display: flex;
