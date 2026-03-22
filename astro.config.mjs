@@ -4,7 +4,7 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://paboden.github.io',
-  base: '/markgodi_com',
+  base: '/',
   publicDir: './public',
   redirects: {
     '/about': '/markgodi_com/#about',
