@@ -1,27 +1,22 @@
 ---
-import Container from "../layouts/Container.astro";
-
-import type { HTMLAttributes } from "astro/types";
-
-interface Props extends HTMLAttributes<"div"> {
-  fileName: string;
-  alt?: string;
-  size?: "small" | "medium" | "large" | "extra";
-}
+import { Image } from "astro:assets";
 
 const {
-  fileName,
-  size = "medium",
-  alt = "Decorative image",
+  src,
+  alt = "Decorative image of Preston the Tortoise",
   ...attr
 } = Astro.props;
-
-const prefix = "/markgodi_com/";
-const src = `${prefix}${Astro.props.fileName}`;
 ---
 
-<div class:list={["decor-image-wrapper", size, attr.class]}>
-  <img class="decor-image" src={src} alt={alt} />
+<div class:list={["decor-image-wrapper", attr.class]}>
+  <Image
+    class="decor-image"
+    src={src}
+    alt={alt}
+    layout="constrained"
+    format="webp"
+    {...attr}
+  />
 </div>
 
 <style>
@@ -32,35 +27,10 @@ const src = `${prefix}${Astro.props.fileName}`;
   }
 
   .decor-image {
-    width: 100%;
-    width: clamp(6rem, 20vw, 8rem);
+    max-width: 100%;
     height: auto;
     margin: 0 auto;
     display: flex;
-  }
-
-  .small .decor-image {
-    width: clamp(6rem, 20vw, 8rem);
-  }
-
-  .medium .decor-image {
-    width: clamp(10rem, 25vw, 14rem);
-  }
-
-  .large .decor-image {
-    width: clamp(12rem, 30vw, 18rem);
-  }
-
-  .extra .decor-image {
-    width: clamp(18rem, 40vw, 25rem);
-  }
-
-  .stamp-styled {
-    /* border-radius: 9000px;
-    border: 0.4rem solid #244057;
-    padding: 0.5rem;
-    background-color: white; */
-    max-width: 15rem;
   }
 
   .preston-footer-logo {

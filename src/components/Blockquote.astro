@@ -42,14 +42,15 @@ const {
 
 <style>
   .blockquote {
-    font-family: "EB Garamond", serif;
+    font-family: var(--font-garamond);
     font-size: clamp(1.5rem, 6vw, 2.5rem);
     font-style: italic;
-    line-height: 1.3;
+    line-height: 1.25;
     margin: 2rem auto;
     padding: 0;
     text-align: center;
     text-wrap: balance;
+    text-indent: clamp(1rem, 4dvw, 3rem);
   }
 
   @media (min-width: 90ch) {
@@ -82,6 +83,7 @@ const {
   }
 
   figcaption {
+    font-family: var(--font-garamond);
     display: block;
     margin-top: 1rem;
     font-size: 1.25rem;
@@ -89,7 +91,7 @@ const {
 
   .blockquote.alternate figcaption {
     font-size: 1.25rem;
-    color: #666;
+    color: #444;
   }
 
   .blockquote.alternate .note {

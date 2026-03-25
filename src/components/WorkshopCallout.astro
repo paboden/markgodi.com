@@ -1,10 +1,12 @@
 ---
 import Container from "../layouts/Container.astro";
 import DecorImage from "./DecorImage.astro";
+
+import prestonPencilCutout from "../assets/images/preston-pencil-cutout.png";
 ---
 
-<Container bg="tan" id="workshops" spacing="extra">
-  <DecorImage size="extra" fileName="preston-pencil-cutout.png" />
+<Container bg="yellow" id="workshop" spacing="extra">
+  <DecorImage src={prestonPencilCutout} width={430} height={285} />
 
   <div class="columns" id="introduction">
     <div class="left">
@@ -87,30 +89,16 @@ import DecorImage from "./DecorImage.astro";
   }
 
   hgroup p {
-    font-family: "EB Garamond", serif;
-    /* font-size: clamp(1.5rem, 4vw, 2.25rem); */
+    font-family: var(--font-garamond);
     margin-top: 0;
     margin-bottom: 1.5rem;
     font-style: italic;
   }
 
-  p.lead {
-    font-size: 2.25rem;
-    line-height: 1.3;
-    margin-top: 0;
-    font-family: "EB Garamond", serif;
-  }
-
-  p.small {
-    font-size: 1.75rem;
-    line-height: 1.3;
-    margin-top: 0;
-    font-family: "EB Garamond", serif;
-  }
-
   hr {
     border: none;
     border-top: 2px solid #ebc975;
+    border-top-color: #f2ead6;
     margin: 1rem 0;
   }
 
@@ -168,6 +156,7 @@ import DecorImage from "./DecorImage.astro";
     margin-block: auto;
     color: #244057;
     background-color: #ebc975;
+    background-color: #f2ead6;
   }
   @media (min-width: 80ch) {
     .links a {

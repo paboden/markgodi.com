@@ -1,17 +1,24 @@
 ---
 import Container from "../layouts/Container.astro";
 import DecorImage from "./DecorImage.astro";
+import { Image } from "astro:assets";
+
+import prestonReadingCutout from "../assets/images/preston-reading-cutout.png";
+import slowbuiltBookCoverImage from "../assets/images/slowbuilt-book-promo-manual-edit2.png";
 ---
 
 <Container bg="white" id="book" spacing="extra">
-  <DecorImage size="large" fileName="preston-reading-cutout.png" />
+  <DecorImage src={prestonReadingCutout} width={290} height={170} />
 
   <div class="columns" id="introduction">
     <div class="column left">
-      <img
-        src="/markgodi_com/slowbuilt-book-promo-manual-edit2.png"
+      <Image
+        src={slowbuiltBookCoverImage}
         alt="Book cover image for Slowbuilt: Education, Growth, and Grace (January 2026)"
         class="book-image"
+        width={400}
+        height={500}
+        layout="constrained"
       />
     </div>
 
@@ -129,7 +136,8 @@ import DecorImage from "./DecorImage.astro";
   }
 
   hgroup p {
-    font-family: "EB Garamond", serif;
+    font-family: var(--font-garamond);
+    /* font-family: "EB Garamond", serif; */
     font-size: clamp(1.5rem, 4vw, 2.25rem);
     color: #244057;
     margin-top: 0;

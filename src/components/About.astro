@@ -1,10 +1,14 @@
 ---
 import Container from "../layouts/Container.astro";
 import DecorImage from "./DecorImage.astro";
+import { Image } from "astro:assets";
+
+import prestonLookingCutout from "../assets/images/preston-looking-cutout.png";
+import wascConferencePhoto from "../assets/images/wasc-conference-photo.webp";
 ---
 
 <Container bg="tan" id="about" spacing="extra">
-  <DecorImage size="medium" fileName="preston-looking-cutout.png" />
+  <DecorImage src={prestonLookingCutout} width={225} height={201} />
 
   <h2 id="about">About me</h2>
 
@@ -48,7 +52,16 @@ import DecorImage from "./DecorImage.astro";
   </div>
 
   <figure class="conference-pic">
-    <img src="/markgodi_com/wasc-conference-photo.webp" alt="Mark Godi" />
+    <Image
+      src={wascConferencePhoto}
+      alt="WASC 2025 conference panel seated on stage"
+      width={1214}
+      height={457}
+      widths={[240, 540, 720, 1214]}
+      sizes={`(max-width: 540px) 360px, (max-width: 720px) 540px, (max-width: 1200px) 720px, 1214px`}
+      layout="constrained"
+      format="webp"
+    />
     <figcaption>
       At the 2025 NorCal WASC Conference, where I was a keynote speaker.
     </figcaption>
@@ -120,7 +133,8 @@ import DecorImage from "./DecorImage.astro";
   }
 
   figcaption {
-    font-family: "EB Garamond", serif;
+    font-family: var(--font-garamond);
+    /* font-family: "EB Garamond", serif; */
     font-size: 0.875rem;
     color: #244057;
     display: block;

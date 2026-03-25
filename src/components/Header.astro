@@ -1,5 +1,8 @@
 ---
 import Navigation from "./Navigation.astro";
+import { Image } from "astro:assets";
+
+import logo from "../assets/images/website-logo.png";
 ---
 
 <div id="home"></div>
@@ -8,12 +11,13 @@ import Navigation from "./Navigation.astro";
   <div class="container">
     <div class="branding">
       <a href="#home">
-        <img
-          src="/markgodi_com/website-logo.png"
-          alt="Mark Godi Logo"
+        <Image
+          src={logo}
+          alt="Mark Godi website Logo"
           class="logo"
-          width="48"
-          height="48"
+          width={26}
+          height={26}
+          loading="eager"
         />
         <div>MarkGodi<em>.com</em></div>
       </a>
@@ -47,7 +51,7 @@ import Navigation from "./Navigation.astro";
     align-items: center;
     gap: 1rem;
     color: rgba(251, 247, 236, 1);
-    font-family: "EB Garamond", serif;
+    font-family: var(--font-garamond);
     font-size: clamp(1.25rem, 4vw, 1.75rem);
     margin: 0;
     padding: 0;

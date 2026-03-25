@@ -3,8 +3,10 @@ import Container from "../layouts/Container.astro";
 import Blockquote from "./Blockquote.astro";
 ---
 
-<Container bg="yellow" id="reviews" spacing="extra">
+<Container bg="tan" id="reviews" spacing="extra">
   <h2 id="reviews">Reviews</h2>
+
+  <hr />
 
   <Blockquote
     bg="none"
@@ -56,10 +58,10 @@ import Blockquote from "./Blockquote.astro";
         note="Veteran counselor at Stockton's Lincoln High School, the largest high school in San Joaquin County."
       >
         <p>
-          I love each page of this nice to read book. It caused me to really
+          "I love each page of this nice to read book. It caused me to really
           reflect as a school counselor and parent how I view and hold space for
           my students who are like Mark. It was inspiring and caused me to
-          really stop and think. I will use these ideas in my life and at work.
+          really stop and think. I will use these ideas in my life and at work."
         </p>
       </Blockquote>
     </div>
@@ -74,7 +76,7 @@ import Blockquote from "./Blockquote.astro";
   }
 
   .column {
-    border-block-start: 1px solid #244057;
+    border-block-start: 2px solid #244057;
   }
 
   @media (min-width: 120ch) {
@@ -84,7 +86,7 @@ import Blockquote from "./Blockquote.astro";
       margin-block-end: 3rem;
       align-items: flex-start;
 
-      border-block-start: 1px solid #244057;
+      border-block-start: 2px solid #244057;
       padding-block-start: 3rem;
       margin-block-start: 3rem;
     }

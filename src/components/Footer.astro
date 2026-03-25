@@ -1,6 +1,21 @@
 ---
+import Container from "../layouts/Container.astro";
+import DecorImage from "./DecorImage.astro";
+
+import prestonMainCutout from "../assets/images/preston-main-cutout.png";
+
 const year = new Date().getFullYear();
 ---
+
+<Container bg="tan" class="shadow" spacing="extra">
+  <DecorImage
+    src={prestonMainCutout}
+    width={285}
+    height={350}
+    class="preston-footer-logo"
+  />
+  <p class="preston-comment">FYI, this is Preston the tortoise.</p>
+</Container>
 
 <footer class="blue small">
   <div class="container">
@@ -16,5 +31,14 @@ const year = new Date().getFullYear();
   p {
     font-size: 0.9rem;
     opacity: 0.7;
+  }
+
+  p.preston-comment {
+    font-family: var(--font-garamond);
+    font-size: 1.25rem;
+    font-style: italic;
+    color: #222;
+    margin-top: 1rem;
+    text-align: center;
   }
 </style>

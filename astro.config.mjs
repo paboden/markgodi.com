@@ -1,16 +1,39 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders } from 'astro/config';
+import robotsTxt from 'astro-robots-txt';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://paboden.github.io',
   base: '/',
   publicDir: './public',
+  integrations: [
+    robotsTxt({
+      policy: [{ userAgent: '*', allow: '/' }],
+    }),
+  ],
   redirects: {
-    '/about': '/markgodi_com/#about',
-    '/book': '/markgodi_com/#book',
-    '/workshops': '/markgodi_com/#workshops',
-    '/connect': '/markgodi_com/#connect',
-    '/blog': '/markgodi_com/#blog',
-  }
+    '/about': '/#about',
+    '/book': '/#book',
+    '/reviews': '/#reviews',
+    '/workshop': '/#workshop',
+    '/workshops': '/#workshop',
+    '/connect': '/#connect',
+    '/blog': '/#blog',
+    '/markgodi_com/about': '/markgodi_com/#about',
+    '/markgodi_com/book': '/markgodi_com/#book',
+    '/markgodi_com/reviews': '/markgodi_com/#reviews',
+    '/markgodi_com/workshops': '/markgodi_com/#workshop',
+    '/markgodi_com/workshop': '/markgodi_com/#workshop',
+    '/markgodi_com/connect': '/markgodi_com/#connect',
+    '/markgodi_com/blog': '/markgodi_com/#blog',
+  },
+  fonts: [
+    {
+      provider: fontProviders.fontsource(),
+      name: "EB Garamond",
+      cssVariable: "--font-garamond",
+      fallbacks: ["serif"]
+    }
+  ]
 });
