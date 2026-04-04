@@ -6,13 +6,11 @@ import Blockquote from "./Blockquote.astro";
 <Container bg="tan" id="reviews" spacing="extra">
   <h2 id="reviews">Reviews</h2>
 
-  <hr />
-
   <Blockquote
     bg="none"
     style="alternate"
     citation="Tara Cuslidge Staiano"
-    note="Berkeley-Educated instructor and award-winning journalistic publication advisor at San Joaquin Delta College (more than 20-years in education)."
+    note="Berkeley-Educated instructor and award-winning journalistic publication advisor at San Joaquin Delta College (more than 20-years in education)"
   >
     <p>
       "Author Mark Godi digs deep into his own memories and realities as he
@@ -35,6 +33,47 @@ import Blockquote from "./Blockquote.astro";
       <Blockquote
         bg="none"
         style="alternate"
+        citation="AnneLisa Butcher"
+        note="Veteran counselor at Stockton's Lincoln High School, the largest high school in San Joaquin County"
+      >
+        <p>
+          "I love each page of this nice to read book. It caused me to really
+          reflect as a school counselor and parent how I view and hold space for
+          my students who are like Mark. It was inspiring and caused me to
+          really stop and think. I will use these ideas in my life and at work."
+        </p>
+      </Blockquote>
+
+      <Blockquote
+        bg="none"
+        style="alternate"
+        citation="Dr. Charlane Starks"
+        note="Assistant Professor (retired) of The University of the Pacific’s Benerd School of Education in Stockton"
+      >
+        <p>
+          "You have a powerful personal story. I can see you presenting your
+          personal story to (future teachers)."
+        </p>
+      </Blockquote>
+
+      <Blockquote
+        bg="none"
+        style="alternate"
+        citation="Lori Ruegsegger"
+        note="Executive Director of Instructional Services for Lincoln Unified School District"
+      >
+        <p>
+          “I loved it!!! Such a fantastic perspective. I love how you connect
+          your own experience and the emphasis on “seeing” students through more
+          than assessments and assignments. Your classroom always reflected that
+          insight, but to be able to share it with others is invaluable.”
+        </p>
+      </Blockquote>
+    </div>
+    <div class="column">
+      <Blockquote
+        bg="none"
+        style="alternate"
         citation="Dr. Barry R. Groves"
         note="Stanford-Educated Education Leader with 50 Years Shaping California Schools, from Teacher to WASC President"
       >
@@ -49,19 +88,23 @@ import Blockquote from "./Blockquote.astro";
           steadily and authentically."
         </p>
       </Blockquote>
-    </div>
-    <div class="column">
+
       <Blockquote
         bg="none"
         style="alternate"
-        citation="AnneLisa Butcher"
-        note="Veteran counselor at Stockton's Lincoln High School, the largest high school in San Joaquin County."
+        citation="Kimberly Nelson,"
+        note="English Teacher/STEM Advisor at California Military Institute (PUHSD)"
       >
         <p>
-          "I love each page of this nice to read book. It caused me to really
-          reflect as a school counselor and parent how I view and hold space for
-          my students who are like Mark. It was inspiring and caused me to
-          really stop and think. I will use these ideas in my life and at work."
+          "Slowbuilt is a remarkable and deeply moving read. Journeying through
+          the author’s insecurities and triumphs prompted me to pause and
+          reflect on my own, offering a fresh perspective on my growth,
+          vulnerabilities, and accomplishments. The message resonates
+          profoundly: ‘Keep going, not because you have a grand reason, but
+          because each layer matters. Your life is a vessel in progress—uneven,
+          sometimes invisible, but real. Keep shaping it.’ It is a reminder that
+          our lives, with all their complexity, are worth tending to with
+          patience and care."
         </p>
       </Blockquote>
     </div>
@@ -74,22 +117,12 @@ import Blockquote from "./Blockquote.astro";
     flex-direction: column;
   }
 
-  .column {
-    border-block-start: 2px solid #244057;
-    border-block-start: 2px solid #ebc975;
-  }
-
   @media (min-width: 120ch) {
     .columns {
       flex-direction: row;
       gap: 3rem;
-      margin-block-end: 3rem;
+      column-gap: 4rem;
       align-items: flex-start;
-
-      border-block-start: 2px solid #244057;
-      border-block-start: 2px solid #ebc975;
-      padding-block-start: 3rem;
-      margin-block-start: 3rem;
     }
 
     .column {
@@ -109,10 +142,6 @@ import Blockquote from "./Blockquote.astro";
     h2 {
       text-align: center;
     }
-  }
-
-  ul {
-    margin-block: 0;
   }
 
   p {
